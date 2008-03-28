@@ -1,8 +1,8 @@
-Summary:    run scripts or programs in a directory
+Summary:    Run scripts or programs in a directory
 Name:       run-parts
 Version:    1.15
 Release:    %mkrel 1
-License:    GPL2
+License:    GPLv2+
 Group:      System/Configuration/Other
 Url:        http://svn.mandriva.com/svn/soft/run-parts/trunk
 Source:     %{name}-%{version}.tar.gz
@@ -31,6 +31,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog NEWS README
+%doc COPYING README
 %{_bindir}/run-parts
 %{_mandir}/man8/*8*
