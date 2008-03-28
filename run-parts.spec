@@ -34,3 +34,10 @@ rm -rf %{buildroot}
 %doc COPYING README
 %{_bindir}/run-parts
 %{_mandir}/man8/*8*
+%lang(cs) %_mandir/cs/man8/*8*
+%lang(et) %_mandir/et/man8/*8*
+%lang(eu) %_mandir/eu/man8/*8*
+%lang(fr) %_mandir/fr/man8/*8*
+%lang(it) %_mandir/it/man8/*8*
+%lang(nl) %_mandir/nl/man8/*8*
+%lang(uk) %_mandir/uk/man8/*8*
