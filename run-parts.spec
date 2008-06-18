@@ -1,7 +1,7 @@
 Summary:    Run scripts or programs in a directory
 Name:       run-parts
 Version:    1.15
-Release:    %mkrel 1
+Release:    %mkrel 2
 License:    GPLv2+
 Group:      System/Configuration/Other
 Url:        http://svn.mandriva.com/svn/soft/run-parts/trunk
