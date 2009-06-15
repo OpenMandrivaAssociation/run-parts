@@ -1,13 +1,13 @@
 Summary:    Run scripts or programs in a directory
 Name:       run-parts
-Version:    1.15
-Release:    %mkrel 3
+Version:    3.13
+Release:    %mkrel 1
 License:    GPLv2+
 Group:      System/Configuration/Other
 Url:        http://svn.mandriva.com/svn/soft/run-parts/trunk
 Source:     %{name}-%{version}.tar.gz
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 Conflicts:  setup < 2.7.11-2
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 run-parts runs a number of scripts or programs found in a single direc-
@@ -19,8 +19,8 @@ directory and files with other names will be silently ignored.
 %setup -q
 
 %build
-%configure
-%make CFLAGS="$RPM_OPT_FLAGS"
+%configure2_5x
+%make
 
 %install
 rm -rf %{buildroot}
