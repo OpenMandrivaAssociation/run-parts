@@ -1,6 +1,6 @@
 Summary:    Run scripts or programs in a directory
 Name:       run-parts
-Version:    3.13
+Version:    3.2.1
 Release:    %mkrel 1
 License:    GPLv2+
 Group:      System/Configuration/Other
