@@ -1,6 +1,6 @@
 Name:       run-parts
 Version:    3.2.1
-Release:    %mkrel 5
+Release:    %mkrel 6
 Epoch:      1
 Summary:    Run scripts or programs in a directory
 License:    GPLv2+
