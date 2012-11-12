@@ -1,0 +1,26 @@
+Index: trunk/run-parts.8
+===================================================================
+--- trunk/run-parts.8	(révision 259518)
++++ trunk/run-parts.8	(copie de travail)
+@@ -34,7 +34,7 @@
+ belong to one or more of the following namespaces: the
+ LANANA-assigned namespace (^[a\-z0\-9]+$); the LSB hierarchical and
+ reserved namespaces (^_?([a\-z0\-9_.]+\-)+[a\-z0\-9]+$);
+-and the Debian cron script namespace (^[a\-zA-Z0\-9_\-]+$).
++and the Mandriva cron script namespace (^[a\-zA-Z0\-9_\-][a\-zA-Z0\-9_\-.]+$).
+ 
+ If the \-\-regex option is given, the names must match the custom
+ extended regular expression specified as that option's argument.
+Index: trunk/run-parts.c
+===================================================================
+--- trunk/run-parts.c	(révision 259518)
++++ trunk/run-parts.c	(copie de travail)
+@@ -501,7 +501,7 @@
+                     != 0)
+             pt_regex = &tradre;
+ 
+-    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-]+$",
++    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-][.a-zA-Z0-9_-]+$",
+                     REG_EXTENDED | REG_NOSUB)) != 0)
+         pt_regex = &classicalre;
+ 
