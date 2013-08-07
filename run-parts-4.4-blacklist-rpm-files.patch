@@ -1,9 +1,8 @@
-Index: trunk/run-parts.8
-===================================================================
---- trunk/run-parts.8	(révision 259517)
-+++ trunk/run-parts.8	(révision 259518)
+diff -Naur debianutils-4.4/run-parts.8 debianutils-4.4.tpg/run-parts.8
+--- debianutils-4.4/run-parts.8	2013-07-28 01:30:26.000000000 +0000
++++ debianutils-4.4.tpg/run-parts.8	2013-08-07 17:31:51.222178474 +0000
 @@ -30,7 +30,7 @@
- digits, underscores, and hyphens.
+ letters, ASCII digits, ASCII underscores, and ASCII minus-hyphens.
  
  If the \-\-lsbsysinit option is given, then the names must not end
 -in .dpkg\-old  or .dpkg\-dist or .dpkg\-new or .dpkg\-tmp, and must
@@ -11,11 +10,10 @@ Index: trunk/run-parts.8
  belong to one or more of the following namespaces: the
  LANANA-assigned namespace (^[a\-z0\-9]+$); the LSB hierarchical and
  reserved namespaces (^_?([a\-z0\-9_.]+\-)+[a\-z0\-9]+$);
-Index: trunk/run-parts.c
-===================================================================
---- trunk/run-parts.c	(révision 259517)
-+++ trunk/run-parts.c	(révision 259518)
-@@ -493,7 +493,7 @@
+diff -Naur debianutils-4.4/run-parts.c debianutils-4.4.tpg/run-parts.c
+--- debianutils-4.4/run-parts.c	2013-07-28 01:30:26.000000000 +0000
++++ debianutils-4.4.tpg/run-parts.c	2013-08-07 17:32:24.885175479 +0000
+@@ -579,7 +579,7 @@
                      REG_EXTENDED | REG_NOSUB)) != 0)
              pt_regex = &hierre;
  

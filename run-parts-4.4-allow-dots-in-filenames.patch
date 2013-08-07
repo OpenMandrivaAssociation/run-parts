@@ -1,21 +1,19 @@
-Index: trunk/run-parts.8
-===================================================================
---- trunk/run-parts.8	(révision 259518)
-+++ trunk/run-parts.8	(copie de travail)
+diff -Naur debianutils-4.4/run-parts.8 debianutils-4.4.tpg/run-parts.8
+--- debianutils-4.4/run-parts.8	2013-07-28 01:30:26.000000000 +0000
++++ debianutils-4.4.tpg/run-parts.8	2013-08-07 17:29:19.489191972 +0000
 @@ -34,7 +34,7 @@
  belong to one or more of the following namespaces: the
  LANANA-assigned namespace (^[a\-z0\-9]+$); the LSB hierarchical and
  reserved namespaces (^_?([a\-z0\-9_.]+\-)+[a\-z0\-9]+$);
 -and the Debian cron script namespace (^[a\-zA-Z0\-9_\-]+$).
-+and the Mandriva cron script namespace (^[a\-zA-Z0\-9_\-][a\-zA-Z0\-9_\-.]+$).
++and the Distribution cron script namespace (^[a\-zA-Z0\-9_\-][a\-zA-Z0\-9_\-.]+$).
  
  If the \-\-regex option is given, the names must match the custom
  extended regular expression specified as that option's argument.
-Index: trunk/run-parts.c
-===================================================================
---- trunk/run-parts.c	(révision 259518)
-+++ trunk/run-parts.c	(copie de travail)
-@@ -501,7 +501,7 @@
+diff -Naur debianutils-4.4/run-parts.c debianutils-4.4.tpg/run-parts.c
+--- debianutils-4.4/run-parts.c	2013-07-28 01:30:26.000000000 +0000
++++ debianutils-4.4.tpg/run-parts.c	2013-08-07 17:30:46.001184276 +0000
+@@ -587,7 +587,7 @@
                      != 0)
              pt_regex = &tradre;
  
