@@ -34,13 +34,17 @@ install -d -m 755 %{buildroot}%{_mandir}/fr/man8
 
 install -m 755 run-parts  %{buildroot}%{_bindir}
 install -m 644 run-parts.8  %{buildroot}%{_mandir}/man8
-install -m 644 po4a/fr/run-parts.8  %{buildroot}%{_mandir}/fr/man8
 
-%files
+for l in po4a/*/run-parts.8; do
+    install -D -m644  ${l} %{buildroot}%{_mandir}/${l:5:2}/man8/run-parts.8
+done
+
+%find_lang %{name} --with-man
+
+%files -f %{name}.lang
 %doc debian/changelog debian/copyright
 %{_bindir}/run-parts
 %{_mandir}/man8/run-parts.8*
-%{_mandir}/fr/man8/run-parts.8*
 
 
 %changelog
