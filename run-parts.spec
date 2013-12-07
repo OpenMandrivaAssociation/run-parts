@@ -1,6 +1,6 @@
 Name:		run-parts
 Version:	4.4
-Release:	3
+Release:	4
 Epoch:		1
 Summary:	Run scripts or programs in a directory
 License:	GPLv2+
