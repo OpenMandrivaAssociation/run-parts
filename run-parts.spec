@@ -1,6 +1,6 @@
 Name:       run-parts
 Version:    3.2.1
-Release:    10
+Release:    11
 Epoch:      1
 Summary:    Run scripts or programs in a directory
 License:    GPLv2+
