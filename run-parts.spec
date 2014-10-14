@@ -1,6 +1,6 @@
 Name:		run-parts
 Version:	4.4
-Release:	7
+Release:	8
 Epoch:		1
 Summary:	Run scripts or programs in a directory
 License:	GPLv2+
@@ -24,7 +24,7 @@ directory and files with other names will be silently ignored.
 
 %build
 %serverbuild_hardened
-%configure2_5x
+%configure
 %make run-parts
 
 %install
