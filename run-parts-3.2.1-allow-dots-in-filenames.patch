@@ -1,24 +1,26 @@
-diff -Naur debianutils-4.4/run-parts.8 debianutils-4.4.tpg/run-parts.8
---- debianutils-4.4/run-parts.8	2013-07-28 01:30:26.000000000 +0000
-+++ debianutils-4.4.tpg/run-parts.8	2013-08-07 17:29:19.489191972 +0000
+Index: debianutils/run-parts.8
+===================================================================
+--- debianutils/run-parts.8
++++ debianutils/run-parts.8	2018-04-19 19:16:15.419296716 +0000
 @@ -34,7 +34,7 @@
  belong to one or more of the following namespaces: the
  LANANA-assigned namespace (^[a\-z0\-9]+$); the LSB hierarchical and
  reserved namespaces (^_?([a\-z0\-9_.]+\-)+[a\-z0\-9]+$);
 -and the Debian cron script namespace (^[a\-zA-Z0\-9_\-]+$).
-+and the Distribution cron script namespace (^[a\-zA-Z0\-9_\-][a\-zA-Z0\-9_\-.]+$).
++and the Mageia cron script namespace (^[a\-zA-Z0\-9_\-][a\-zA-Z0\-9_\-.]+$).
  
  If the \-\-regex option is given, the names must match the custom
  extended regular expression specified as that option's argument.
-diff -Naur debianutils-4.4/run-parts.c debianutils-4.4.tpg/run-parts.c
---- debianutils-4.4/run-parts.c	2013-07-28 01:30:26.000000000 +0000
-+++ debianutils-4.4.tpg/run-parts.c	2013-08-07 17:30:46.001184276 +0000
+Index: debianutils/run-parts.c
+===================================================================
+--- debianutils/run-parts.c
++++ debianutils/run-parts.c	2018-04-19 19:17:06.019430442 +0000
 @@ -587,7 +587,7 @@
                      != 0)
              pt_regex = &tradre;
  
 -    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-]+$",
-+    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-][.a-zA-Z0-9_-]+$",
++	} else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-][.a-zA-Z0-9_-]+$",
                      REG_EXTENDED | REG_NOSUB)) != 0)
          pt_regex = &classicalre;
  

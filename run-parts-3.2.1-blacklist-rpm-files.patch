@@ -1,6 +1,7 @@
-diff -Naur debianutils-4.4/run-parts.8 debianutils-4.4.tpg/run-parts.8
---- debianutils-4.4/run-parts.8	2013-07-28 01:30:26.000000000 +0000
-+++ debianutils-4.4.tpg/run-parts.8	2013-08-07 17:31:51.222178474 +0000
+Index: debianutils/run-parts.8
+===================================================================
+--- debianutils/run-parts.8
++++ debianutils/run-parts.8	2018-04-19 19:13:29.458858117 +0000
 @@ -30,7 +30,7 @@
  letters, ASCII digits, ASCII underscores, and ASCII minus-hyphens.
  
@@ -10,15 +11,16 @@ diff -Naur debianutils-4.4/run-parts.8 debianutils-4.4.tpg/run-parts.8
  belong to one or more of the following namespaces: the
  LANANA-assigned namespace (^[a\-z0\-9]+$); the LSB hierarchical and
  reserved namespaces (^_?([a\-z0\-9_.]+\-)+[a\-z0\-9]+$);
-diff -Naur debianutils-4.4/run-parts.c debianutils-4.4.tpg/run-parts.c
---- debianutils-4.4/run-parts.c	2013-07-28 01:30:26.000000000 +0000
-+++ debianutils-4.4.tpg/run-parts.c	2013-08-07 17:32:24.885175479 +0000
+Index: debianutils/run-parts.c
+===================================================================
+--- debianutils/run-parts.c
++++ debianutils/run-parts.c	2018-04-19 19:14:22.658998718 +0000
 @@ -579,7 +579,7 @@
                      REG_EXTENDED | REG_NOSUB)) != 0)
              pt_regex = &hierre;
  
--        else if ( (err = regcomp(&excsre, "^[a-z0-9-].*dpkg-(old|dist|new|tmp)$",
-+        else if ( (err = regcomp(&excsre, "^[a-z0-9-].*rpm(save|new)$",
+-        else if ( (err = regcomp(&excsre, "^[a-z0-9-].*\\.dpkg-(old|dist|new|tmp)$",
++	else if ( (err = regcomp(&excsre, "^[a-z0-9-].*rpm(save|new)$",
                      REG_EXTENDED | REG_NOSUB)) != 0)
              pt_regex = &excsre;
  

@@ -7,8 +7,8 @@ License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://svn.mandriva.com/svn/soft/run-parts/trunk
 Source0:	http://ftp.de.debian.org/debian/pool/main/d/debianutils/debianutils_%{version}.tar.xz
-Patch0:		run-parts-4.4-blacklist-rpm-files.patch
-Patch1:		run-parts-4.4-allow-dots-in-filenames.patch
+Patch0:		run-parts-3.2.1-blacklist-rpm-files.patch
+Patch1:		run-parts-3.2.1-allow-dots-in-filenames.patch
 Conflicts:	setup < 2.7.11-2
 
 %description
