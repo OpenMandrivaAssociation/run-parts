@@ -1,5 +1,5 @@
 Name:		run-parts
-Version:	4.8.6.3
+Version:	4.9
 Release:	1
 Epoch:		1
 Summary:	Run scripts or programs in a directory
