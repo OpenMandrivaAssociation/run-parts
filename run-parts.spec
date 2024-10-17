@@ -5,7 +5,7 @@ Epoch:		1
 Summary:	Run scripts or programs in a directory
 License:	GPLv2+
 Group:		System/Configuration/Other
-Url:		http://svn.mandriva.com/svn/soft/run-parts/trunk
+Url:		https://svn.mandriva.com/svn/soft/run-parts/trunk
 Source0:	http://ftp.de.debian.org/debian/pool/main/d/debianutils/debianutils_%{version}.tar.xz
 Patch0:		run-parts-3.2.1-blacklist-rpm-files.patch
 Patch1:		run-parts-3.2.1-allow-dots-in-filenames.patch
