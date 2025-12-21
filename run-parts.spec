@@ -11,6 +11,11 @@ Patch0:		run-parts-3.2.1-blacklist-rpm-files.patch
 Patch1:		run-parts-3.2.1-allow-dots-in-filenames.patch
 Conflicts:	setup < 2.7.11-2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 run-parts runs a number of scripts or programs found in a single direc-
 tory.  Filenames should consist entirely of upper and lower
