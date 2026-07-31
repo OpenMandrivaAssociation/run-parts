@@ -1,13 +1,13 @@
 Name:		run-parts
-Version:	4.9.1
-Release:	2
+Version:	5.23.2
+Release:	1
 Epoch:		1
 Summary:	Run scripts or programs in a directory
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://svn.mandriva.com/svn/soft/run-parts/trunk
 Source0:	http://ftp.de.debian.org/debian/pool/main/d/debianutils/debianutils_%{version}.tar.xz
-Patch0:		run-parts-3.2.1-blacklist-rpm-files.patch
+# dropped (no longer applies): Patch0:		run-parts-3.2.1-blacklist-rpm-files.patch
 Patch1:		run-parts-3.2.1-allow-dots-in-filenames.patch
 Conflicts:	setup < 2.7.11-2
 
@@ -23,7 +23,7 @@ case letters, digits,  underscores,  and  hyphens. Subdirectories  of
 directory and files with other names will be silently ignored.
 
 %prep
-%autosetup -n debianutils-%{version} -p1
+%autosetup -n work -p1
 
 %build
 %serverbuild_hardened
