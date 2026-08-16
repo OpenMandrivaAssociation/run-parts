@@ -1,6 +1,6 @@
 Name:		run-parts
 Version:	5.23.2
-Release:	1
+Release:	2
 Epoch:		1
 Summary:	Run scripts or programs in a directory
 License:	GPLv2+
@@ -16,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
+BuildRequires:	po4a
 %description
 run-parts runs a number of scripts or programs found in a single direc-
 tory.  Filenames should consist entirely of upper and lower
@@ -29,6 +30,7 @@ directory and files with other names will be silently ignored.
 %serverbuild_hardened
 %configure
 %make_build run-parts
+%make_build -C po4a
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
@@ -39,7 +41,8 @@ install -m 755 run-parts  %{buildroot}%{_bindir}
 install -m 644 run-parts.8  %{buildroot}%{_mandir}/man8
 
 for l in po4a/*/run-parts.8; do
-    install -D -m644  ${l} %{buildroot}%{_mandir}/${l:5:2}/man8/run-parts.8
+    [ -f "$l" ] || continue
+    install -D -m644 ${l} %{buildroot}%{_mandir}/${l:5:2}/man8/run-parts.8
 done
 
 %find_lang %{name} --with-man
